@@ -1,0 +1,2880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Comprehensive SEO Meta Tags -->
+    <title>Hisab - Professional Body Workshop Salary Management System</title>
+    <meta name="description" content="Hisab - Complete salary management system for body workshop daily wage workers. Track attendance, calculate salaries, manage workers, and generate reports.">
+    <meta name="keywords" content="salary sheet, daily wage workers, body workshop, attendance tracking, payroll management, worker management, salary calculation, workshop management, Hisab">
+    <meta name="author" content="Hisab Workshop Management">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="rating" content="General">
+    <meta name="revisit-after" content="7 days">
+    <meta name="language" content="English">
+    <meta name="distribution" content="Global">
+    <meta name="subject" content="Workshop Salary Management Software">
+    <meta name="classification" content="Business Software">
+    <meta name="topic" content="Salary Management for Daily Wage Workers">
+    <meta name="summary" content="Professional salary management system for body workshops and daily wage workers">
+    <meta name="abstract" content="Complete solution for managing workshop workers, attendance, and salary calculations">
+    <meta name="copyright" content="Copyright © Hisab">
+    <meta name="designer" content="Hisab Team">
+    <meta name="owner" content="Hisab Workshop Management">
+    <meta name="url" content="https://hisab-workshop.com">
+    <meta name="identifier-URL" content="https://hisab-workshop.com">
+    <meta name="directory" content="submission">
+    <meta name="category" content="business">
+    <meta name="coverage" content="Worldwide">
+    <meta name="target" content="all">
+    <meta name="audience" content="workshop owners, managers">
+    <meta name="development" content="live">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Hisab - Professional Workshop Salary Management">
+    <meta property="og:description" content="Complete salary management system for body workshop daily wage workers">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hisab-workshop.com">
+    <meta property="og:image" content="https://hisab-workshop.com/og-image.jpg">
+    <meta property="og:site_name" content="Hisab Workshop Management">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hisab - Workshop Salary Management">
+    <meta name="twitter:description" content="Manage your workshop workers, attendance, and salaries efficiently">
+    <meta name="twitter:image" content="https://hisab-workshop.com/twitter-image.jpg">
+    
+    <!-- Additional Meta Tags -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#2c3e50">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Hisab Workshop Management",
+        "description": "Professional salary management system for body workshop daily wage workers",
+        "url": "https://hisab-workshop.com",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "Hisab",
+            "url": "https://hisab-workshop.com"
+        }
+    }
+    </script>
+    
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --success-color: #27ae60;
+            --warning-color: #f39c12;
+            --danger-color: #c0392b;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --gray-color: #95a5a6;
+            --sidebar-width: 250px;
+            --header-height: 70px;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Login Page Styles */
+        #loginPage {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 400px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .login-header {
+            background: var(--primary-color);
+            padding: 30px;
+            text-align: center;
+            color: white;
+        }
+
+        .login-header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .login-header h1 i {
+            color: var(--secondary-color);
+        }
+
+        .login-header p {
+            opacity: 0.9;
+            font-size: 14px;
+        }
+
+        .login-body {
+            padding: 40px 30px;
+        }
+
+        .alert {
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        .alert-error {
+            background-color: #fee;
+            border-left: 4px solid var(--danger-color);
+            color: var(--danger-color);
+        }
+
+        .alert-success {
+            background-color: #d4edda;
+            border-left: 4px solid var(--success-color);
+            color: var(--success-color);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .password-wrapper {
+            position: relative;
+        }
+
+        .password-wrapper input {
+            width: 100%;
+            padding-right: 45px;
+        }
+
+        .toggle-password {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--gray-color);
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+        }
+
+        .btn {
+            padding: 14px 20px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 15px;
+            width: 100%;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(52, 152, 219, 0.3);
+        }
+
+        .login-footer {
+            text-align: center;
+            margin-top: 30px;
+            color: var(--gray-color);
+            font-size: 13px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        /* Main App Styles */
+        #app {
+            display: none;
+        }
+
+        .app-container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: var(--sidebar-width);
+            background: linear-gradient(180deg, var(--primary-color) 0%, #1a252f 100%);
+            color: white;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+
+        .sidebar-header {
+            padding: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            font-size: 24px;
+            color: var(--secondary-color);
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            font-weight: 700;
+            background: linear-gradient(45deg, #3498db, #2ecc71);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .user-profile {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .user-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--secondary-color), var(--success-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 32px;
+        }
+
+        .user-info h3 {
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+
+        .user-info span {
+            font-size: 14px;
+            color: var(--gray-color);
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 3px 10px;
+            border-radius: 20px;
+        }
+
+        /* Navigation */
+        .nav-menu {
+            list-style: none;
+            padding: 20px 0;
+        }
+
+        .nav-item {
+            margin-bottom: 5px;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px 20px;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+            cursor: pointer;
+        }
+
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-left-color: var(--secondary-color);
+        }
+
+        .nav-link.active {
+            background-color: rgba(52, 152, 219, 0.2);
+            color: white;
+            border-left-color: var(--secondary-color);
+        }
+
+        .nav-link i {
+            width: 20px;
+            text-align: center;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            margin-left: var(--sidebar-width);
+        }
+
+        /* Top Header */
+        .top-header {
+            height: var(--header-height);
+            background: white;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 30px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .menu-toggle {
+            background: none;
+            border: none;
+            font-size: 20px;
+            color: var(--primary-color);
+            cursor: pointer;
+            display: none;
+        }
+
+        .search-box {
+            position: relative;
+        }
+
+        .search-box input {
+            padding: 10px 15px 10px 40px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            width: 300px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray-color);
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .notification {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .notification i {
+            font-size: 20px;
+            color: var(--primary-color);
+        }
+
+        .notification-badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: var(--accent-color);
+            color: white;
+            font-size: 10px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .user-dropdown {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .user-dropdown-toggle {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .user-dropdown img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            min-width: 200px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+
+        .user-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 20px;
+            color: #333;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #f5f5f5;
+        }
+
+        .dropdown-divider {
+            height: 1px;
+            background-color: #eee;
+            margin: 5px 0;
+        }
+
+        /* Content Area */
+        .content-wrapper {
+            padding: 30px;
+        }
+
+        /* Dashboard Stats */
+        .dashboard-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 5px solid var(--secondary-color);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-card.total-workers {
+            border-left-color: var(--secondary-color);
+        }
+
+        .stat-card.present-today {
+            border-left-color: var(--success-color);
+        }
+
+        .stat-card.pending-salary {
+            border-left-color: var(--warning-color);
+        }
+
+        .stat-card.monthly-expense {
+            border-left-color: var(--accent-color);
+        }
+
+        .stat-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .stat-header i {
+            font-size: 24px;
+            color: currentColor;
+            opacity: 0.8;
+        }
+
+        .stat-value {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+
+        .stat-label {
+            color: var(--gray-color);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stat-change {
+            font-size: 12px;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .stat-change.positive {
+            color: var(--success-color);
+        }
+
+        .stat-change.negative {
+            color: var(--danger-color);
+        }
+
+        /* Recent Activity */
+        .recent-activity {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .section-header h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .view-all {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .activity-list {
+            list-style: none;
+        }
+
+        .activity-item {
+            display: flex;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .activity-item:last-child {
+            border-bottom: none;
+        }
+
+        .activity-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .activity-icon.present {
+            background-color: rgba(39, 174, 96, 0.1);
+            color: var(--success-color);
+        }
+
+        .activity-icon.absent {
+            background-color: rgba(231, 76, 60, 0.1);
+            color: var(--accent-color);
+        }
+
+        .activity-details {
+            flex: 1;
+        }
+
+        .activity-details h4 {
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .activity-time {
+            font-size: 12px;
+            color: var(--gray-color);
+        }
+
+        /* Tables */
+        .data-table {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .table-header {
+            padding: 20px 25px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .table-header h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .table-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 14px;
+            width: auto;
+        }
+
+        .btn-primary {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+        }
+
+        .btn-success {
+            background-color: var(--success-color);
+            color: white;
+        }
+
+        .btn-success:hover {
+            background-color: #219653;
+            transform: translateY(-2px);
+        }
+
+        .btn-warning {
+            background-color: var(--warning-color);
+            color: white;
+        }
+
+        .btn-warning:hover {
+            background-color: #e67e22;
+        }
+
+        .btn-danger {
+            background-color: var(--danger-color);
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background-color: #a93226;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--secondary-color);
+            color: var(--secondary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background-color: #f8f9fa;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            white-space: nowrap;
+        }
+
+        td {
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        tbody tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        .status-badge {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .status-active {
+            background-color: rgba(39, 174, 96, 0.1);
+            color: var(--success-color);
+        }
+
+        .status-inactive {
+            background-color: rgba(149, 165, 166, 0.1);
+            color: var(--gray-color);
+        }
+
+        .status-pending {
+            background-color: rgba(243, 156, 18, 0.1);
+            color: var(--warning-color);
+        }
+
+        .status-paid {
+            background-color: rgba(39, 174, 96, 0.1);
+            color: var(--success-color);
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background-color: transparent;
+            color: var(--gray-color);
+        }
+
+        .btn-icon:hover {
+            background-color: #f5f5f5;
+            color: var(--primary-color);
+        }
+
+        .btn-edit:hover {
+            color: var(--secondary-color);
+        }
+
+        .btn-delete:hover {
+            color: var(--danger-color);
+        }
+
+        /* Forms */
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .form-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+            margin-bottom: 0;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+
+        .required::after {
+            content: " *";
+            color: var(--accent-color);
+        }
+
+        select.form-control {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 16px;
+            padding-right: 40px;
+        }
+
+        /* Modals */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 500px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal-header {
+            padding: 20px 25px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--gray-color);
+            cursor: pointer;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .close-modal:hover {
+            color: var(--primary-color);
+        }
+
+        .modal-body {
+            padding: 25px;
+        }
+
+        .modal-footer {
+            padding: 20px 25px;
+            border-top: 1px solid #eee;
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+            
+            .sidebar.active {
+                transform: translateX(0);
+            }
+            
+            .main-content {
+                margin-left: 0;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            .search-box input {
+                width: 200px;
+            }
+            
+            .dashboard-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .dashboard-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .content-wrapper {
+                padding: 20px;
+            }
+            
+            .table-header {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+            
+            .table-actions {
+                width: 100%;
+                justify-content: flex-end;
+            }
+            
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .top-header {
+                padding: 0 15px;
+            }
+            
+            .search-box input {
+                width: 150px;
+            }
+            
+            .header-right {
+                gap: 10px;
+            }
+            
+            .stat-card {
+                padding: 20px;
+            }
+            
+            .stat-value {
+                font-size: 28px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--gray-color);
+        }
+
+        .empty-state i {
+            font-size: 64px;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+
+        .empty-state h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .empty-state p {
+            margin-bottom: 30px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Login Page -->
+    <div id="loginPage">
+        <div class="login-container">
+            <div class="login-header">
+                <h1><i class="fas fa-tools"></i> Hisab</h1>
+                <p>Body Workshop Salary Management System</p>
+            </div>
+            <div class="login-body">
+                <div id="loginError" class="alert alert-error" style="display: none;">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span id="errorMessage"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="username"><i class="fas fa-user"></i> Username</label>
+                    <input type="text" id="username" class="form-control" placeholder="Enter username" value="admin">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password"><i class="fas fa-lock"></i> Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="password" class="form-control" placeholder="Enter password" value="admin123">
+                        <button type="button" class="toggle-password" onclick="togglePassword()">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <button class="btn btn-primary" onclick="login()">
+                    <i class="fas fa-sign-in-alt"></i> Sign In
+                </button>
+                
+                <div class="login-footer">
+                    <p>Default Credentials: admin / admin123</p>
+                    <p>&copy; <span id="currentYear"></span> Hisab - Workshop Management System</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Application -->
+    <div id="app">
+        <div class="app-container">
+            <!-- Sidebar -->
+            <aside class="sidebar" id="sidebar">
+                <div class="sidebar-header">
+                    <div class="logo">
+                        <i class="fas fa-tools"></i>
+                        <h1>Hisab</h1>
+                    </div>
+                </div>
+                
+                <div class="user-profile">
+                    <div class="user-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="user-info">
+                        <h3 id="userFullName">Administrator</h3>
+                        <span id="userRole">admin</span>
+                    </div>
+                </div>
+                
+                <nav class="nav-menu">
+                    <ul>
+                        <li class="nav-item">
+                            <a class="nav-link active" onclick="showDashboard()">
+                                <i class="fas fa-home"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="showWorkers()">
+                                <i class="fas fa-users"></i>
+                                <span>Workers</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="showAttendance()">
+                                <i class="fas fa-calendar-check"></i>
+                                <span>Attendance</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="showSalary()">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <span>Salary</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="showReports()">
+                                <i class="fas fa-chart-bar"></i>
+                                <span>Reports</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="showSettings()">
+                                <i class="fas fa-cog"></i>
+                                <span>Settings</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="logout()">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span>Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            
+            <!-- Main Content -->
+            <main class="main-content">
+                <!-- Top Header -->
+                <header class="top-header">
+                    <div class="header-left">
+                        <button class="menu-toggle" onclick="toggleSidebar()">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="globalSearch" placeholder="Search workers, reports, etc..." onkeyup="handleSearch(event)">
+                        </div>
+                    </div>
+                    
+                    <div class="header-right">
+                        <div class="notification">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-badge" id="notificationCount">0</span>
+                        </div>
+                        <div class="user-dropdown">
+                            <div class="user-dropdown-toggle">
+                                <img src="https://ui-avatars.com/api/?name=Admin&background=3498db&color=fff" alt="Admin" id="userAvatar">
+                                <span id="headerUserName">Admin</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="dropdown-menu">
+                                <a onclick="showProfile()">
+                                    <i class="fas fa-user"></i>
+                                    <span>My Profile</span>
+                                </a>
+                                <a onclick="showSettings()">
+                                    <i class="fas fa-cog"></i>
+                                    <span>Settings</span>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a onclick="logout()">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    <span>Logout</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                
+                <!-- Content Wrapper -->
+                <div class="content-wrapper" id="contentWrapper">
+                    <!-- Content will be loaded here dynamically -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="addWorkerModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add New Worker</h3>
+                <button class="close-modal" onclick="closeModal('addWorkerModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="workerName" class="required">Full Name</label>
+                        <input type="text" id="workerName" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="workerContact" class="required">Contact Number</label>
+                        <input type="tel" id="workerContact" class="form-control" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="workerAddress">Address</label>
+                    <textarea id="workerAddress" class="form-control" rows="3"></textarea>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="dailyWage" class="required">Daily Wage (₹)</label>
+                        <input type="number" id="dailyWage" class="form-control" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="workerDesignation" class="required">Designation</label>
+                        <select id="workerDesignation" class="form-control" required>
+                            <option value="">Select Designation</option>
+                            <option value="Painter">Painter</option>
+                            <option value="Mechanic">Mechanic</option>
+                            <option value="Helper">Helper</option>
+                            <option value="Supervisor">Supervisor</option>
+                            <option value="Electrician">Electrician</option>
+                            <option value="Welder">Welder</option>
+                            <option value="Cleaner">Cleaner</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="joinDate" class="required">Join Date</label>
+                    <input type="date" id="joinDate" class="form-control" required>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline" onclick="closeModal('addWorkerModal')">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="saveWorker()">Add Worker</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="markAttendanceModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Mark Attendance</h3>
+                <button class="close-modal" onclick="closeModal('markAttendanceModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="attendanceDate" class="required">Date</label>
+                    <input type="date" id="attendanceDate" class="form-control" required>
+                </div>
+                
+                <div id="attendanceList"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline" onclick="closeModal('markAttendanceModal')">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="saveAttendance()">Save Attendance</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="calculateSalaryModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Calculate Salary</h3>
+                <button class="close-modal" onclick="closeModal('calculateSalaryModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="salaryMonth" class="required">Month</label>
+                    <input type="month" id="salaryMonth" class="form-control" required>
+                </div>
+                <p class="text-muted">This will calculate salary for all active workers based on their attendance.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline" onclick="closeModal('calculateSalaryModal')">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="calculateSalary()">Calculate</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Global variables
+        let currentUser = null;
+        let currentPage = 'dashboard';
+        let workers = [];
+        let attendance = [];
+        let salaryRecords = [];
+        let users = [];
+
+        // Initialize application
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set current year in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Initialize default data if not exists
+            initializeData();
+            
+            // Check if user is already logged in
+            checkLogin();
+        });
+
+        // Initialize default data
+        function initializeData() {
+            if (!localStorage.getItem('hisab_workers')) {
+                const defaultWorkers = [
+                    {
+                        id: 1,
+                        name: "Rahul Sharma",
+                        contact: "9876543210",
+                        address: "123 Workshop Street, Mumbai",
+                        dailyWage: 800,
+                        designation: "Painter",
+                        joinDate: "2023-01-15",
+                        status: "active"
+                    },
+                    {
+                        id: 2,
+                        name: "Amit Patel",
+                        contact: "9876543211",
+                        address: "456 Garage Road, Delhi",
+                        dailyWage: 700,
+                        designation: "Mechanic",
+                        joinDate: "2023-02-20",
+                        status: "active"
+                    },
+                    {
+                        id: 3,
+                        name: "Suresh Kumar",
+                        contact: "9876543212",
+                        address: "789 Auto Nagar, Bangalore",
+                        dailyWage: 600,
+                        designation: "Helper",
+                        joinDate: "2023-03-10",
+                        status: "active"
+                    }
+                ];
+                localStorage.setItem('hisab_workers', JSON.stringify(defaultWorkers));
+            }
+
+            if (!localStorage.getItem('hisab_attendance')) {
+                const today = new Date().toISOString().split('T')[0];
+                const defaultAttendance = [
+                    {
+                        id: 1,
+                        workerId: 1,
+                        date: today,
+                        status: "present",
+                        hours: 8,
+                        notes: ""
+                    },
+                    {
+                        id: 2,
+                        workerId: 2,
+                        date: today,
+                        status: "present",
+                        hours: 8,
+                        notes: ""
+                    },
+                    {
+                        id: 3,
+                        workerId: 3,
+                        date: today,
+                        status: "absent",
+                        hours: 0,
+                        notes: "Sick leave"
+                    }
+                ];
+                localStorage.setItem('hisab_attendance', JSON.stringify(defaultAttendance));
+            }
+
+            if (!localStorage.getItem('hisab_salary')) {
+                const currentMonth = new Date().toISOString().slice(0, 7);
+                const defaultSalary = [
+                    {
+                        id: 1,
+                        workerId: 1,
+                        month: currentMonth,
+                        presentDays: 22,
+                        basicSalary: 17600,
+                        overtime: 1200,
+                        deductions: 0,
+                        bonuses: 500,
+                        netSalary: 19300,
+                        status: "paid",
+                        paymentDate: new Date().toISOString().split('T')[0]
+                    },
+                    {
+                        id: 2,
+                        workerId: 2,
+                        month: currentMonth,
+                        presentDays: 20,
+                        basicSalary: 14000,
+                        overtime: 800,
+                        deductions: 200,
+                        bonuses: 300,
+                        netSalary: 14900,
+                        status: "pending",
+                        paymentDate: null
+                    }
+                ];
+                localStorage.setItem('hisab_salary', JSON.stringify(defaultSalary));
+            }
+
+            if (!localStorage.getItem('hisab_users')) {
+                const defaultUsers = [
+                    {
+                        id: 1,
+                        username: "admin",
+                        password: "admin123",
+                        fullName: "Administrator",
+                        role: "admin"
+                    },
+                    {
+                        id: 2,
+                        username: "manager",
+                        password: "manager123",
+                        fullName: "Workshop Manager",
+                        role: "manager"
+                    }
+                ];
+                localStorage.setItem('hisab_users', JSON.stringify(defaultUsers));
+            }
+
+            // Load data
+            workers = JSON.parse(localStorage.getItem('hisab_workers') || '[]');
+            attendance = JSON.parse(localStorage.getItem('hisab_attendance') || '[]');
+            salaryRecords = JSON.parse(localStorage.getItem('hisab_salary') || '[]');
+            users = JSON.parse(localStorage.getItem('hisab_users') || '[]');
+        }
+
+        // Login functions
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const toggleIcon = document.querySelector('.toggle-password i');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleIcon.className = 'fas fa-eye-slash';
+            } else {
+                passwordInput.type = 'password';
+                toggleIcon.className = 'fas fa-eye';
+            }
+        }
+
+        function login() {
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
+            
+            const user = users.find(u => u.username === username && u.password === password);
+            
+            if (user) {
+                currentUser = user;
+                localStorage.setItem('currentUser', JSON.stringify(user));
+                showApp();
+            } else {
+                showError('Invalid username or password');
+            }
+        }
+
+        function showError(message) {
+            const errorDiv = document.getElementById('loginError');
+            const errorMessage = document.getElementById('errorMessage');
+            errorMessage.textContent = message;
+            errorDiv.style.display = 'flex';
+        }
+
+        function checkLogin() {
+            const savedUser = localStorage.getItem('currentUser');
+            if (savedUser) {
+                currentUser = JSON.parse(savedUser);
+                showApp();
+            }
+        }
+
+        function showApp() {
+            document.getElementById('loginPage').style.display = 'none';
+            document.getElementById('app').style.display = 'block';
+            
+            // Update user info
+            document.getElementById('userFullName').textContent = currentUser.fullName;
+            document.getElementById('userRole').textContent = currentUser.role;
+            document.getElementById('headerUserName').textContent = currentUser.fullName;
+            
+            // Show dashboard by default
+            showDashboard();
+        }
+
+        function logout() {
+            currentUser = null;
+            localStorage.removeItem('currentUser');
+            document.getElementById('app').style.display = 'none';
+            document.getElementById('loginPage').style.display = 'flex';
+        }
+
+        // Navigation functions
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('active');
+        }
+
+        function setActiveNav(link) {
+            document.querySelectorAll('.nav-link').forEach(nav => nav.classList.remove('active'));
+            link.classList.add('active');
+        }
+
+        // Page loading functions
+        function showDashboard() {
+            currentPage = 'dashboard';
+            setActiveNav(document.querySelector('[onclick="showDashboard()"]'));
+            
+            const stats = calculateDashboardStats();
+            
+            const html = `
+                <div class="dashboard-stats fade-in">
+                    <div class="stat-card total-workers">
+                        <div class="stat-header">
+                            <i class="fas fa-users"></i>
+                            <span class="stat-change positive">
+                                <i class="fas fa-arrow-up"></i>
+                                12% from last month
+                            </span>
+                        </div>
+                        <div class="stat-value">${stats.totalWorkers}</div>
+                        <div class="stat-label">Total Active Workers</div>
+                    </div>
+                    
+                    <div class="stat-card present-today">
+                        <div class="stat-header">
+                            <i class="fas fa-user-check"></i>
+                            <span class="stat-change positive">
+                                <i class="fas fa-arrow-up"></i>
+                                5% from yesterday
+                            </span>
+                        </div>
+                        <div class="stat-value">${stats.presentToday}</div>
+                        <div class="stat-label">Present Today</div>
+                    </div>
+                    
+                    <div class="stat-card pending-salary">
+                        <div class="stat-header">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span class="stat-change negative">
+                                <i class="fas fa-arrow-down"></i>
+                                ${stats.pendingSalary} pending
+                            </span>
+                        </div>
+                        <div class="stat-value">${stats.pendingSalary}</div>
+                        <div class="stat-label">Pending Salary</div>
+                    </div>
+                    
+                    <div class="stat-card monthly-expense">
+                        <div class="stat-header">
+                            <i class="fas fa-chart-line"></i>
+                            <span class="stat-change">
+                                <i class="fas fa-info-circle"></i>
+                                This month
+                            </span>
+                        </div>
+                        <div class="stat-value">₹${stats.monthlyExpense.toLocaleString('en-IN')}</div>
+                        <div class="stat-label">Monthly Expense</div>
+                    </div>
+                </div>
+                
+                <div class="recent-activity fade-in">
+                    <div class="section-header">
+                        <h2>Recent Activity</h2>
+                        <a class="view-all" onclick="showAttendance()">
+                            View All
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <ul class="activity-list" id="recentActivityList">
+                        ${getRecentActivityHTML()}
+                    </ul>
+                </div>
+                
+                <div class="data-table fade-in">
+                    <div class="table-header">
+                        <h2>Quick Actions</h2>
+                        <div class="table-actions">
+                            <button class="btn btn-primary" onclick="openMarkAttendanceModal()">
+                                <i class="fas fa-calendar-plus"></i>
+                                Mark Attendance
+                            </button>
+                            <button class="btn btn-success" onclick="openCalculateSalaryModal()">
+                                <i class="fas fa-calculator"></i>
+                                Calculate Salary
+                            </button>
+                            <button class="btn btn-warning" onclick="openAddWorkerModal()">
+                                <i class="fas fa-user-plus"></i>
+                                Add Worker
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Action</th>
+                                    <th>Description</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Today's Attendance</td>
+                                    <td>Mark attendance for ${new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })}</td>
+                                    <td>
+                                        <span class="status-badge status-pending">
+                                            <i class="fas fa-clock"></i>
+                                            Pending
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <button class="btn-icon" onclick="openMarkAttendanceModal()">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Monthly Salary</td>
+                                    <td>Calculate salary for ${new Date().toLocaleDateString('en-IN', { month: 'long', year: 'numeric' })}</td>
+                                    <td>
+                                        <span class="status-badge status-pending">
+                                            <i class="fas fa-clock"></i>
+                                            Due
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <button class="btn-icon" onclick="openCalculateSalaryModal()">
+                                            <i class="fas fa-calculator"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('contentWrapper').innerHTML = html;
+        }
+
+        function showWorkers() {
+            currentPage = 'workers';
+            setActiveNav(document.querySelector('[onclick="showWorkers()"]'));
+            
+            const html = `
+                <div class="data-table fade-in">
+                    <div class="table-header">
+                        <h2>Workers Management</h2>
+                        <div class="table-actions">
+                            <button class="btn btn-primary" onclick="openAddWorkerModal()">
+                                <i class="fas fa-user-plus"></i>
+                                Add New Worker
+                            </button>
+                            <button class="btn btn-outline" onclick="exportWorkers()">
+                                <i class="fas fa-download"></i>
+                                Export
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="table-container">
+                        <table id="workersTable">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Contact</th>
+                                    <th>Daily Wage</th>
+                                    <th>Designation</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${workers.map(worker => `
+                                    <tr>
+                                        <td>#${worker.id.toString().padStart(4, '0')}</td>
+                                        <td>
+                                            <strong>${worker.name}</strong>
+                                            ${worker.address ? `<br><small>${worker.address.substring(0, 30)}${worker.address.length > 30 ? '...' : ''}</small>` : ''}
+                                        </td>
+                                        <td>${worker.contact}</td>
+                                        <td>₹${worker.dailyWage.toLocaleString('en-IN')}</td>
+                                        <td>${worker.designation}</td>
+                                        <td>
+                                            <span class="status-badge ${worker.status === 'active' ? 'status-active' : 'status-inactive'}">
+                                                <i class="fas fa-circle"></i>
+                                                ${worker.status.charAt(0).toUpperCase() + worker.status.slice(1)}
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <div class="action-buttons">
+                                                <button class="btn-icon" onclick="editWorker(${worker.id})">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                                <button class="btn-icon btn-delete" onclick="deleteWorker(${worker.id})">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('contentWrapper').innerHTML = html;
+        }
+
+        function showAttendance() {
+            currentPage = 'attendance';
+            setActiveNav(document.querySelector('[onclick="showAttendance()"]'));
+            
+            const today = new Date().toISOString().split('T')[0];
+            const todayAttendance = attendance.filter(a => a.date === today);
+            
+            const html = `
+                <div class="data-table fade-in">
+                    <div class="table-header">
+                        <h2>Attendance Management</h2>
+                        <div class="table-actions">
+                            <button class="btn btn-primary" onclick="openMarkAttendanceModal()">
+                                <i class="fas fa-calendar-plus"></i>
+                                Mark Attendance
+                            </button>
+                            <button class="btn btn-outline" onclick="printAttendance()">
+                                <i class="fas fa-print"></i>
+                                Print
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="table-container">
+                        <table id="attendanceTable">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Worker</th>
+                                    <th>Status</th>
+                                    <th>Hours</th>
+                                    <th>Notes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${attendance.slice(0, 20).map(record => {
+                                    const worker = workers.find(w => w.id === record.workerId);
+                                    return `
+                                        <tr>
+                                            <td>${formatDate(record.date)}</td>
+                                            <td>${worker ? worker.name : 'Unknown'}</td>
+                                            <td>
+                                                <span class="status-badge ${record.status === 'present' ? 'status-active' : 'status-inactive'}">
+                                                    <i class="fas fa-${record.status === 'present' ? 'check' : 'times'}"></i>
+                                                    ${record.status.charAt(0).toUpperCase() + record.status.slice(1)}
+                                                </span>
+                                            </td>
+                                            <td>${record.hours}</td>
+                                            <td>${record.notes || ''}</td>
+                                        </tr>
+                                    `;
+                                }).join('')}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="dashboard-stats" style="margin-top: 30px;">
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <i class="fas fa-calendar-day"></i>
+                            <span class="stat-change positive">Today</span>
+                        </div>
+                        <div class="stat-value">${formatDate(today)}</div>
+                        <div class="stat-label">Current Date</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <i class="fas fa-user-check"></i>
+                            <span class="stat-change">Present Today</span>
+                        </div>
+                        <div class="stat-value">${todayAttendance.filter(a => a.status === 'present').length}</div>
+                        <div class="stat-label">Present Workers</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <i class="fas fa-user-times"></i>
+                            <span class="stat-change">Missing</span>
+                        </div>
+                        <div class="stat-value">${todayAttendance.filter(a => a.status === 'absent').length}</div>
+                        <div class="stat-label">Absent Workers</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <i class="fas fa-percentage"></i>
+                            <span class="stat-change">Rate</span>
+                        </div>
+                        <div class="stat-value">${todayAttendance.length > 0 ? Math.round((todayAttendance.filter(a => a.status === 'present').length / todayAttendance.length) * 100) : 0}%</div>
+                        <div class="stat-label">Attendance Rate</div>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('contentWrapper').innerHTML = html;
+        }
+
+        function showSalary() {
+            currentPage = 'salary';
+            setActiveNav(document.querySelector('[onclick="showSalary()"]'));
+            
+            const currentMonth = new Date().toISOString().slice(0, 7);
+            const monthSalary = salaryRecords.filter(s => s.month === currentMonth);
+            const totalSalary = monthSalary.reduce((sum, s) => sum + s.netSalary, 0);
+            const paidCount = monthSalary.filter(s => s.status === 'paid').length;
+            const pendingCount = monthSalary.filter(s => s.status === 'pending').length;
+            
+            const html = `
+                <div class="data-table fade-in">
+                    <div class="table-header">
+                        <h2>Salary Management - ${formatMonth(currentMonth)}</h2>
+                        <div class="table-actions">
+                            <button class="btn btn-primary" onclick="openCalculateSalaryModal()">
+                                <i class="fas fa-calculator"></i>
+                                Calculate Salary
+                            </button>
+                            <button class="btn btn-success" onclick="processAllPayments()">
+                                <i class="fas fa-money-bill-wave"></i>
+                                Process Payments
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-stats" style="margin-bottom: 30px;">
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <i class="fas fa-users"></i>
+                                <span class="stat-change">This Month</span>
+                            </div>
+                            <div class="stat-value">${monthSalary.length}</div>
+                            <div class="stat-label">Workers</div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <span class="stat-change">Total Salary</span>
+                            </div>
+                            <div class="stat-value">₹${totalSalary.toLocaleString('en-IN')}</div>
+                            <div class="stat-label">Net Payable</div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <i class="fas fa-check-circle"></i>
+                                <span class="stat-change positive">Paid</span>
+                            </div>
+                            <div class="stat-value">${paidCount}</div>
+                            <div class="stat-label">Paid Workers</div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <i class="fas fa-clock"></i>
+                                <span class="stat-change negative">Pending</span>
+                            </div>
+                            <div class="stat-value">${pendingCount}</div>
+                            <div class="stat-label">Pending Payments</div>
+                        </div>
+                    </div>
+                    
+                    <div class="table-container">
+                        <table id="salaryTable">
+                            <thead>
+                                <tr>
+                                    <th>Worker</th>
+                                    <th>Present Days</th>
+                                    <th>Basic Salary</th>
+                                    <th>Overtime</th>
+                                    <th>Net Salary</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${monthSalary.map(record => {
+                                    const worker = workers.find(w => w.id === record.workerId);
+                                    return `
+                                        <tr>
+                                            <td>
+                                                <strong>${worker ? worker.name : 'Unknown'}</strong>
+                                                <br><small>ID: #${record.workerId.toString().padStart(4, '0')}</small>
+                                            </td>
+                                            <td>${record.presentDays} days</td>
+                                            <td>₹${record.basicSalary.toLocaleString('en-IN')}</td>
+                                            <td>₹${record.overtime.toLocaleString('en-IN')}</td>
+                                            <td><strong>₹${record.netSalary.toLocaleString('en-IN')}</strong></td>
+                                            <td>
+                                                ${record.status === 'paid' ? `
+                                                    <span class="status-badge status-paid">
+                                                        <i class="fas fa-check"></i> Paid
+                                                        ${record.paymentDate ? `<br><small>${formatDate(record.paymentDate)}</small>` : ''}
+                                                    </span>
+                                                ` : `
+                                                    <span class="status-badge status-pending">
+                                                        <i class="fas fa-clock"></i> Pending
+                                                    </span>
+                                                `}
+                                            </td>
+                                            <td>
+                                                <div class="action-buttons">
+                                                    <button class="btn-icon" onclick="viewSalarySlip(${record.id})">
+                                                        <i class="fas fa-eye"></i>
+                                                    </button>
+                                                    <button class="btn-icon" onclick="markSalaryPaid(${record.id})">
+                                                        <i class="fas fa-check-circle"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    `;
+                                }).join('')}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('contentWrapper').innerHTML = html;
+        }
+
+        function showReports() {
+            currentPage = 'reports';
+            setActiveNav(document.querySelector('[onclick="showReports()"]'));
+            
+            const html = `
+                <div class="data-table fade-in">
+                    <div class="table-header">
+                        <h2>Reports & Analytics</h2>
+                        <div class="table-actions">
+                            <button class="btn btn-primary" onclick="generateMonthlyReport()">
+                                <i class="fas fa-file-pdf"></i>
+                                Monthly Report
+                            </button>
+                            <button class="btn btn-outline" onclick="exportAllData()">
+                                <i class="fas fa-download"></i>
+                                Export All Data
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-card" style="margin-bottom: 30px;">
+                        <h3 style="margin-bottom: 20px;">Report Generator</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="reportType">Report Type</label>
+                                <select id="reportType" class="form-control">
+                                    <option value="attendance">Attendance Report</option>
+                                    <option value="salary">Salary Report</option>
+                                    <option value="worker">Worker Report</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="reportMonth">Month</label>
+                                <input type="month" id="reportMonth" class="form-control" value="${new Date().toISOString().slice(0, 7)}">
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" onclick="generateReport()">
+                            <i class="fas fa-chart-bar"></i>
+                            Generate Report
+                        </button>
+                    </div>
+                    
+                    <div class="dashboard-stats">
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <i class="fas fa-chart-pie"></i>
+                                <span class="stat-change">Total Workers</span>
+                            </div>
+                            <div class="stat-value">${workers.length}</div>
+                            <div class="stat-label">Registered</div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <i class="fas fa-chart-line"></i>
+                                <span class="stat-change">Monthly Expense</span>
+                            </div>
+                            <div class="stat-value">₹${calculateMonthlyExpense().toLocaleString('en-IN')}</div>
+                            <div class="stat-label">This Month</div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <i class="fas fa-percentage"></i>
+                                <span class="stat-change">Attendance</span>
+                            </div>
+                            <div class="stat-value">${calculateAverageAttendance()}%</div>
+                            <div class="stat-label">Average Rate</div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <span class="stat-change">Salary Paid</span>
+                            </div>
+                            <div class="stat-value">₹${calculateTotalSalaryPaid().toLocaleString('en-IN')}</div>
+                            <div class="stat-label">This Month</div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('contentWrapper').innerHTML = html;
+        }
+
+        function showSettings() {
+            currentPage = 'settings';
+            setActiveNav(document.querySelector('[onclick="showSettings()"]'));
+            
+            const html = `
+                <div class="form-container fade-in">
+                    <div class="form-card">
+                        <h2 style="margin-bottom: 30px;">Settings</h2>
+                        
+                        <div class="form-group">
+                            <h3 style="margin-bottom: 20px;">Workshop Information</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="workshopName">Workshop Name</label>
+                                    <input type="text" id="workshopName" class="form-control" value="Hisab Body Workshop">
+                                </div>
+                                <div class="form-group">
+                                    <label for="workshopContact">Contact Number</label>
+                                    <input type="tel" id="workshopContact" class="form-control" value="+91 9876543210">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="workshopAddress">Address</label>
+                                <textarea id="workshopAddress" class="form-control" rows="3">123 Workshop Street, Industrial Area, Mumbai - 400001</textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <h3 style="margin-bottom: 20px;">Salary Settings</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="overtimeRate">Overtime Rate (per hour)</label>
+                                    <input type="number" id="overtimeRate" class="form-control" value="1.5" step="0.1">
+                                </div>
+                                <div class="form-group">
+                                    <label for="workingHours">Standard Working Hours</label>
+                                    <input type="number" id="workingHours" class="form-control" value="8">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <h3 style="margin-bottom: 20px;">User Management</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="newUsername">New Username</label>
+                                    <input type="text" id="newUsername" class="form-control" placeholder="Enter username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="newPassword">New Password</label>
+                                    <input type="password" id="newPassword" class="form-control" placeholder="Enter password">
+                                </div>
+                            </div>
+                            <button class="btn btn-outline" onclick="addNewUser()">
+                                <i class="fas fa-user-plus"></i>
+                                Add User
+                            </button>
+                        </div>
+                        
+                        <div class="modal-footer" style="border-top: 1px solid #eee; margin-top: 30px; padding-top: 20px;">
+                            <button class="btn btn-primary" onclick="saveSettings()">
+                                <i class="fas fa-save"></i>
+                                Save Settings
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('contentWrapper').innerHTML = html;
+        }
+
+        function showProfile() {
+            alert('Profile page would be implemented here');
+        }
+
+        // Modal functions
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('active');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+        }
+
+        function openAddWorkerModal() {
+            document.getElementById('workerName').value = '';
+            document.getElementById('workerContact').value = '';
+            document.getElementById('workerAddress').value = '';
+            document.getElementById('dailyWage').value = '';
+            document.getElementById('workerDesignation').value = '';
+            document.getElementById('joinDate').value = new Date().toISOString().split('T')[0];
+            openModal('addWorkerModal');
+        }
+
+        function openMarkAttendanceModal() {
+            document.getElementById('attendanceDate').value = new Date().toISOString().split('T')[0];
+            loadAttendanceList();
+            openModal('markAttendanceModal');
+        }
+
+        function openCalculateSalaryModal() {
+            document.getElementById('salaryMonth').value = new Date().toISOString().slice(0, 7);
+            openModal('calculateSalaryModal');
+        }
+
+        // Data functions
+        function calculateDashboardStats() {
+            const today = new Date().toISOString().split('T')[0];
+            const todayAttendance = attendance.filter(a => a.date === today);
+            const currentMonth = new Date().toISOString().slice(0, 7);
+            const monthSalary = salaryRecords.filter(s => s.month === currentMonth);
+            
+            return {
+                totalWorkers: workers.length,
+                presentToday: todayAttendance.filter(a => a.status === 'present').length,
+                pendingSalary: salaryRecords.filter(s => s.status === 'pending').length,
+                monthlyExpense: monthSalary.reduce((sum, s) => sum + s.netSalary, 0)
+            };
+        }
+
+        function getRecentActivityHTML() {
+            const recentAttendance = attendance
+                .sort((a, b) => new Date(b.date) - new Date(a.date))
+                .slice(0, 5);
+            
+            return recentAttendance.map(record => {
+                const worker = workers.find(w => w.id === record.workerId);
+                if (!worker) return '';
+                
+                return `
+                    <li class="activity-item">
+                        <div class="activity-icon ${record.status}">
+                            ${record.status === 'present' ? '<i class="fas fa-check"></i>' : 
+                              record.status === 'absent' ? '<i class="fas fa-times"></i>' : 
+                              '<i class="fas fa-adjust"></i>'}
+                        </div>
+                        <div class="activity-details">
+                            <h4>${worker.name}</h4>
+                            <p>Marked as <strong>${record.status}</strong> for ${formatDate(record.date)}</p>
+                            <span class="activity-time">${record.hours} hours</span>
+                        </div>
+                    </li>
+                `;
+            }).join('');
+        }
+
+        function saveWorker() {
+            const name = document.getElementById('workerName').value.trim();
+            const contact = document.getElementById('workerContact').value.trim();
+            const address = document.getElementById('workerAddress').value.trim();
+            const dailyWage = parseFloat(document.getElementById('dailyWage').value);
+            const designation = document.getElementById('workerDesignation').value;
+            const joinDate = document.getElementById('joinDate').value;
+            
+            if (!name || !contact || !dailyWage || !designation || !joinDate) {
+                alert('Please fill all required fields');
+                return;
+            }
+            
+            const newWorker = {
+                id: workers.length > 0 ? Math.max(...workers.map(w => w.id)) + 1 : 1,
+                name,
+                contact,
+                address,
+                dailyWage,
+                designation,
+                joinDate,
+                status: 'active'
+            };
+            
+            workers.push(newWorker);
+            localStorage.setItem('hisab_workers', JSON.stringify(workers));
+            
+            closeModal('addWorkerModal');
+            showNotification('Worker added successfully', 'success');
+            showWorkers();
+        }
+
+        function editWorker(id) {
+            const worker = workers.find(w => w.id === id);
+            if (worker) {
+                if (confirm(`Edit worker: ${worker.name}?`)) {
+                    const newName = prompt('Enter new name:', worker.name);
+                    const newWage = prompt('Enter new daily wage:', worker.dailyWage);
+                    
+                    if (newName && newWage) {
+                        worker.name = newName;
+                        worker.dailyWage = parseFloat(newWage);
+                        localStorage.setItem('hisab_workers', JSON.stringify(workers));
+                        showNotification('Worker updated successfully', 'success');
+                        showWorkers();
+                    }
+                }
+            }
+        }
+
+        function deleteWorker(id) {
+            const worker = workers.find(w => w.id === id);
+            if (worker) {
+                if (confirm(`Are you sure you want to delete ${worker.name}?`)) {
+                    workers = workers.filter(w => w.id !== id);
+                    localStorage.setItem('hisab_workers', JSON.stringify(workers));
+                    showNotification('Worker deleted successfully', 'success');
+                    showWorkers();
+                }
+            }
+        }
+
+        function loadAttendanceList() {
+            const date = document.getElementById('attendanceDate').value;
+            const existingAttendance = attendance.filter(a => a.date === date);
+            
+            let html = '<h4 style="margin-bottom: 15px;">Workers List</h4>';
+            
+            workers.forEach(worker => {
+                const existing = existingAttendance.find(a => a.workerId === worker.id);
+                
+                html += `
+                    <div class="attendance-item" style="margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #eee;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <strong>${worker.name}</strong> (${worker.designation})
+                                <br><small>Daily Wage: ₹${worker.dailyWage}</small>
+                            </div>
+                            <div>
+                                <select class="form-control form-control-sm attendance-status" data-worker="${worker.id}" style="width: 150px;">
+                                    <option value="present" ${existing && existing.status === 'present' ? 'selected' : ''}>Present</option>
+                                    <option value="absent" ${existing && existing.status === 'absent' ? 'selected' : ''}>Absent</option>
+                                    <option value="half_day" ${existing && existing.status === 'half_day' ? 'selected' : ''}>Half Day</option>
+                                </select>
+                                <input type="number" class="form-control form-control-sm attendance-hours" data-worker="${worker.id}" 
+                                       value="${existing ? existing.hours : 8}" min="0" max="24" step="0.5" style="width: 100px; margin-top: 5px;">
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            document.getElementById('attendanceList').innerHTML = html;
+        }
+
+        function saveAttendance() {
+            const date = document.getElementById('attendanceDate').value;
+            const statusElements = document.querySelectorAll('.attendance-status');
+            const hoursElements = document.querySelectorAll('.attendance-hours');
+            
+            statusElements.forEach(element => {
+                const workerId = parseInt(element.dataset.worker);
+                const status = element.value;
+                const hours = parseFloat(document.querySelector(`.attendance-hours[data-worker="${workerId}"]`).value);
+                
+                const existingIndex = attendance.findIndex(a => a.date === date && a.workerId === workerId);
+                
+                if (existingIndex > -1) {
+                    attendance[existingIndex] = {
+                        ...attendance[existingIndex],
+                        status,
+                        hours,
+                        date
+                    };
+                } else {
+                    const newAttendance = {
+                        id: attendance.length > 0 ? Math.max(...attendance.map(a => a.id)) + 1 : 1,
+                        workerId,
+                        date,
+                        status,
+                        hours,
+                        notes: ''
+                    };
+                    attendance.push(newAttendance);
+                }
+            });
+            
+            localStorage.setItem('hisab_attendance', JSON.stringify(attendance));
+            closeModal('markAttendanceModal');
+            showNotification('Attendance saved successfully', 'success');
+            showAttendance();
+        }
+
+        function calculateSalary() {
+            const month = document.getElementById('salaryMonth').value;
+            const monthAttendance = attendance.filter(a => a.date.startsWith(month));
+            
+            workers.forEach(worker => {
+                if (worker.status === 'active') {
+                    const workerAttendance = monthAttendance.filter(a => a.workerId === worker.id);
+                    const presentDays = workerAttendance.filter(a => a.status === 'present').length;
+                    const halfDays = workerAttendance.filter(a => a.status === 'half_day').length;
+                    
+                    if (presentDays > 0 || halfDays > 0) {
+                        const basicSalary = (presentDays * worker.dailyWage) + (halfDays * worker.dailyWage / 2);
+                        const overtime = 0; // Simplified calculation
+                        
+                        const existingIndex = salaryRecords.findIndex(s => s.month === month && s.workerId === worker.id);
+                        
+                        const salaryRecord = {
+                            id: existingIndex > -1 ? salaryRecords[existingIndex].id : salaryRecords.length > 0 ? Math.max(...salaryRecords.map(s => s.id)) + 1 : 1,
+                            workerId: worker.id,
+                            month,
+                            presentDays: presentDays + (halfDays / 2),
+                            basicSalary,
+                            overtime,
+                            deductions: 0,
+                            bonuses: 0,
+                            netSalary: basicSalary + overtime,
+                            status: 'pending',
+                            paymentDate: null
+                        };
+                        
+                        if (existingIndex > -1) {
+                            salaryRecords[existingIndex] = salaryRecord;
+                        } else {
+                            salaryRecords.push(salaryRecord);
+                        }
+                    }
+                }
+            });
+            
+            localStorage.setItem('hisab_salary', JSON.stringify(salaryRecords));
+            closeModal('calculateSalaryModal');
+            showNotification('Salary calculated successfully', 'success');
+            showSalary();
+        }
+
+        function markSalaryPaid(id) {
+            const salaryRecord = salaryRecords.find(s => s.id === id);
+            if (salaryRecord && confirm('Mark this salary as paid?')) {
+                salaryRecord.status = 'paid';
+                salaryRecord.paymentDate = new Date().toISOString().split('T')[0];
+                localStorage.setItem('hisab_salary', JSON.stringify(salaryRecords));
+                showNotification('Salary marked as paid', 'success');
+                showSalary();
+            }
+        }
+
+        function processAllPayments() {
+            if (confirm('Mark all pending salaries as paid?')) {
+                salaryRecords.forEach(record => {
+                    if (record.status === 'pending') {
+                        record.status = 'paid';
+                        record.paymentDate = new Date().toISOString().split('T')[0];
+                    }
+                });
+                localStorage.setItem('hisab_salary', JSON.stringify(salaryRecords));
+                showNotification('All salaries marked as paid', 'success');
+                showSalary();
+            }
+        }
+
+        function viewSalarySlip(id) {
+            const record = salaryRecords.find(s => s.id === id);
+            const worker = workers.find(w => w.id === record.workerId);
+            
+            if (record && worker) {
+                const slipWindow = window.open('', '_blank');
+                slipWindow.document.write(`
+                    <!DOCTYPE html>
+                    <html>
+                    <head>
+                        <title>Salary Slip - ${worker.name}</title>
+                        <style>
+                            body { font-family: Arial, sans-serif; padding: 20px; }
+                            .header { text-align: center; margin-bottom: 30px; }
+                            .header h1 { color: #2c3e50; }
+                            .details { margin-bottom: 20px; }
+                            table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+                            th, td { padding: 10px; border: 1px solid #ddd; text-align: left; }
+                            th { background-color: #f5f5f5; }
+                            .total { font-weight: bold; }
+                            .footer { margin-top: 30px; text-align: center; font-size: 12px; color: #666; }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="header">
+                            <h1>HISAB WORKSHOP</h1>
+                            <p>Salary Slip</p>
+                        </div>
+                        
+                        <div class="details">
+                            <p><strong>Worker:</strong> ${worker.name}</p>
+                            <p><strong>Month:</strong> ${formatMonth(record.month)}</p>
+                            <p><strong>Designation:</strong> ${worker.designation}</p>
+                            <p><strong>Payment Date:</strong> ${record.paymentDate ? formatDate(record.paymentDate) : 'Pending'}</p>
+                        </div>
+                        
+                        <table>
+                            <tr>
+                                <th>Description</th>
+                                <th>Amount (₹)</th>
+                            </tr>
+                            <tr>
+                                <td>Basic Salary (${record.presentDays} days)</td>
+                                <td>${record.basicSalary.toLocaleString('en-IN')}</td>
+                            </tr>
+                            <tr>
+                                <td>Overtime</td>
+                                <td>${record.overtime.toLocaleString('en-IN')}</td>
+                            </tr>
+                            <tr>
+                                <td>Bonuses</td>
+                                <td>${record.bonuses.toLocaleString('en-IN')}</td>
+                            </tr>
+                            <tr>
+                                <td>Deductions</td>
+                                <td>-${record.deductions.toLocaleString('en-IN')}</td>
+                            </tr>
+                            <tr class="total">
+                                <td>Net Salary</td>
+                                <td>₹${record.netSalary.toLocaleString('en-IN')}</td>
+                            </tr>
+                        </table>
+                        
+                        <div class="footer">
+                            <p>This is a computer generated slip. No signature required.</p>
+                            <p>Hisab Workshop Management System</p>
+                        </div>
+                    </body>
+                    </html>
+                `);
+                slipWindow.document.close();
+            }
+        }
+
+        // Utility functions
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            return date.toLocaleDateString('en-IN', {
+                day: '2-digit',
+                month: 'short',
+                year: 'numeric'
+            });
+        }
+
+        function formatMonth(monthString) {
+            const [year, month] = monthString.split('-');
+            const date = new Date(year, month - 1);
+            return date.toLocaleDateString('en-IN', { month: 'long', year: 'numeric' });
+        }
+
+        function showNotification(message, type = 'info') {
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.className = `notification-toast notification-${type}`;
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: white;
+                padding: 15px 20px;
+                border-radius: 8px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                z-index: 9999;
+                border-left: 4px solid ${type === 'success' ? '#27ae60' : type === 'error' ? '#e74c3c' : '#3498db'};
+                animation: slideIn 0.3s ease;
+            `;
+            
+            const icon = type === 'success' ? 'fa-check-circle' : type === 'error' ? 'fa-exclamation-circle' : 'fa-info-circle';
+            const iconColor = type === 'success' ? '#27ae60' : type === 'error' ? '#e74c3c' : '#3498db';
+            
+            notification.innerHTML = `
+                <i class="fas ${icon}" style="color: ${iconColor}"></i>
+                <span>${message}</span>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Remove after 3 seconds
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.style.animation = 'slideOut 0.3s ease';
+                    setTimeout(() => notification.remove(), 300);
+                }
+            }, 3000);
+            
+            // Add CSS for animation
+            if (!document.querySelector('#notification-styles')) {
+                const style = document.createElement('style');
+                style.id = 'notification-styles';
+                style.textContent = `
+                    @keyframes slideIn {
+                        from {
+                            transform: translateX(100%);
+                            opacity: 0;
+                        }
+                        to {
+                            transform: translateX(0);
+                            opacity: 1;
+                        }
+                    }
+                    @keyframes slideOut {
+                        from {
+                            transform: translateX(0);
+                            opacity: 1;
+                        }
+                        to {
+                            transform: translateX(100%);
+                            opacity: 0;
+                        }
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+        }
+
+        function calculateMonthlyExpense() {
+            const currentMonth = new Date().toISOString().slice(0, 7);
+            return salaryRecords
+                .filter(s => s.month === currentMonth)
+                .reduce((sum, s) => sum + s.netSalary, 0);
+        }
+
+        function calculateAverageAttendance() {
+            const today = new Date().toISOString().split('T')[0];
+            const todayAttendance = attendance.filter(a => a.date === today);
+            return todayAttendance.length > 0 ? 
+                Math.round((todayAttendance.filter(a => a.status === 'present').length / todayAttendance.length) * 100) : 
+                0;
+        }
+
+        function calculateTotalSalaryPaid() {
+            const currentMonth = new Date().toISOString().slice(0, 7);
+            return salaryRecords
+                .filter(s => s.month === currentMonth && s.status === 'paid')
+                .reduce((sum, s) => sum + s.netSalary, 0);
+        }
+
+        function generateReport() {
+            const type = document.getElementById('reportType').value;
+            const month = document.getElementById('reportMonth').value;
+            
+            let reportData = '';
+            let reportTitle = '';
+            
+            switch(type) {
+                case 'attendance':
+                    reportTitle = `Attendance Report - ${formatMonth(month)}`;
+                    const monthAttendance = attendance.filter(a => a.date.startsWith(month));
+                    reportData = monthAttendance.map(a => {
+                        const worker = workers.find(w => w.id === a.workerId);
+                        return `${formatDate(a.date)},${worker ? worker.name : 'Unknown'},${a.status},${a.hours},${a.notes || ''}`;
+                    }).join('\n');
+                    break;
+                    
+                case 'salary':
+                    reportTitle = `Salary Report - ${formatMonth(month)}`;
+                    const monthSalary = salaryRecords.filter(s => s.month === month);
+                    reportData = monthSalary.map(s => {
+                        const worker = workers.find(w => w.id === s.workerId);
+                        return `${worker ? worker.name : 'Unknown'},${s.presentDays},₹${s.basicSalary},₹${s.overtime},₹${s.netSalary},${s.status}`;
+                    }).join('\n');
+                    break;
+                    
+                case 'worker':
+                    reportTitle = `Worker Report`;
+                    reportData = workers.map(w => {
+                        return `${w.name},${w.contact},${w.designation},₹${w.dailyWage},${w.status}`;
+                    }).join('\n');
+                    break;
+            }
+            
+            // Create download link
+            const blob = new Blob([`${reportTitle}\n\n${reportData}`], { type: 'text/csv' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `${type}_report_${month}.csv`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            showNotification('Report generated successfully', 'success');
+        }
+
+        function generateMonthlyReport() {
+            const currentMonth = new Date().toISOString().slice(0, 7);
+            const monthSalary = salaryRecords.filter(s => s.month === currentMonth);
+            const totalSalary = monthSalary.reduce((sum, s) => sum + s.netSalary, 0);
+            
+            let reportContent = `
+                MONTHLY REPORT - ${formatMonth(currentMonth)}
+                =====================================
+                
+                Total Workers: ${workers.length}
+                Total Salary Paid: ₹${totalSalary.toLocaleString('en-IN')}
+                
+                Salary Details:
+                ${monthSalary.map(s => {
+                    const worker = workers.find(w => w.id === s.workerId);
+                    return `${worker ? worker.name : 'Unknown'}: ₹${s.netSalary.toLocaleString('en-IN')} (${s.status})`;
+                }).join('\n')}
+                
+                Generated on: ${new Date().toLocaleDateString('en-IN')}
+            `;
+            
+            const blob = new Blob([reportContent], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `monthly_report_${currentMonth}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            showNotification('Monthly report generated', 'success');
+        }
+
+        function exportAllData() {
+            const allData = {
+                workers,
+                attendance,
+                salaryRecords,
+                users: users.filter(u => u.password !== 'admin123') // Don't export passwords
+            };
+            
+            const blob = new Blob([JSON.stringify(allData, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `hisab_backup_${new Date().toISOString().split('T')[0]}.json`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            showNotification('All data exported successfully', 'success');
+        }
+
+        function exportWorkers() {
+            const csv = workers.map(w => {
+                return `${w.name},${w.contact},${w.designation},₹${w.dailyWage},${w.status},${w.joinDate}`;
+            }).join('\n');
+            
+            const blob = new Blob([`Name,Contact,Designation,Daily Wage,Status,Join Date\n${csv}`], { type: 'text/csv' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `workers_${new Date().toISOString().split('T')[0]}.csv`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            showNotification('Workers exported successfully', 'success');
+        }
+
+        function printAttendance() {
+            window.print();
+        }
+
+        function handleSearch(event) {
+            const searchTerm = event.target.value.toLowerCase();
+            
+            switch(currentPage) {
+                case 'workers':
+                    const workerRows = document.querySelectorAll('#workersTable tbody tr');
+                    workerRows.forEach(row => {
+                        const text = row.textContent.toLowerCase();
+                        row.style.display = text.includes(searchTerm) ? '' : 'none';
+                    });
+                    break;
+                    
+                case 'attendance':
+                    const attendanceRows = document.querySelectorAll('#attendanceTable tbody tr');
+                    attendanceRows.forEach(row => {
+                        const text = row.textContent.toLowerCase();
+                        row.style.display = text.includes(searchTerm) ? '' : 'none';
+                    });
+                    break;
+                    
+                case 'salary':
+                    const salaryRows = document.querySelectorAll('#salaryTable tbody tr');
+                    salaryRows.forEach(row => {
+                        const text = row.textContent.toLowerCase();
+                        row.style.display = text.includes(searchTerm) ? '' : 'none';
+                    });
+                    break;
+            }
+        }
+
+        function addNewUser() {
+            const username = document.getElementById('newUsername').value.trim();
+            const password = document.getElementById('newPassword').value.trim();
+            
+            if (!username || !password) {
+                alert('Please enter both username and password');
+                return;
+            }
+            
+            if (users.some(u => u.username === username)) {
+                alert('Username already exists');
+                return;
+            }
+            
+            const newUser = {
+                id: users.length > 0 ? Math.max(...users.map(u => u.id)) + 1 : 1,
+                username,
+                password,
+                fullName: username.charAt(0).toUpperCase() + username.slice(1),
+                role: 'manager'
+            };
+            
+            users.push(newUser);
+            localStorage.setItem('hisab_users', JSON.stringify(users));
+            
+            document.getElementById('newUsername').value = '';
+            document.getElementById('newPassword').value = '';
+            
+            showNotification('User added successfully', 'success');
+        }
+
+        function saveSettings() {
+            // In a real application, you would save these settings to localStorage
+            showNotification('Settings saved successfully', 'success');
+        }
+
+        // Update notification count
+        function updateNotificationCount() {
+            const pendingSalary = salaryRecords.filter(s => s.status === 'pending').length;
+            document.getElementById('notificationCount').textContent = pendingSalary;
+        }
+
+        // Initialize notification count
+        setInterval(updateNotificationCount, 5000);
+        updateNotificationCount();
+
+        // Additional hidden content for SEO
+        document.addEventListener('DOMContentLoaded', function() {
+            const hiddenContent = document.createElement('div');
+            hiddenContent.style.cssText = 'display: none; position: absolute; left: -9999px;';
+            hiddenContent.innerHTML = `
+                <h1>Hisab - Complete Workshop Salary Management System</h1>
+                <h2>Professional Solution for Body Workshop Daily Wage Workers</h2>
+                <p>Hisab is the ultimate salary management software designed specifically for body workshops, auto repair shops, and small businesses with daily wage workers. Our comprehensive system helps you manage worker attendance, calculate salaries accurately, generate payslips, and track expenses efficiently.</p>
+                <p>Key features include real-time attendance tracking, automated salary calculation, worker database management, payroll processing, attendance reports, salary slip generation, expense tracking, monthly reports, and user management. Perfect for workshop owners, managers, and supervisors who need to streamline their payroll processes.</p>
+                <p>With Hisab, you can reduce manual errors in salary calculation, save time on payroll processing, improve worker management, and maintain accurate financial records. Our user-friendly interface makes it easy for anyone to manage their workshop operations efficiently.</p>
+                <p>The system supports multiple designations including painters, mechanics, helpers, supervisors, electricians, welders, cleaners, and other workshop staff. Track daily wages, overtime, bonuses, deductions, and generate comprehensive reports for better business insights.</p>
+                <p>Hisab works offline with local storage, ensuring your data is always accessible. The system is mobile-responsive, allowing you to manage your workshop from any device. Secure login system protects your sensitive business data.</p>
+                <p>Keywords: workshop management software, daily wage management system, labor attendance tracking, payroll software for workshops, body shop management system, worker salary calculation software, attendance tracking system, salary sheet automation, workshop payroll software, labor management system, Hisab software, auto workshop management, mechanic salary management, painter attendance system, helper management software</p>
+            `;
+            document.body.appendChild(hiddenContent);
+        });
+    </script>
+</body>
+</html>
